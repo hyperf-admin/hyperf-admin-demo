@@ -1,0 +1,58 @@
+version: '3.1'
+services:
+  app:
+    container_name: hyperf-admin
+    image: registry.cn-hangzhou.aliyuncs.com/mengtui/php-base:1.1.1
+    command:
+      - /bin/sh
+      - -c
+      - |
+        cd /data
+        cp .env.dev.docker .env
+        php -d memory_limit=-1 `which composer` i --no-dev
+        vendor/bin/init-proxy.sh
+        php bin/hyperf.php start
+    volumes:
+      - ./backend:/data
+    tty: true
+    links:
+      - mysql
+      - redis
+    environment:
+      HOST_IP: 127.0.0.1
+      HOST_PORT: 9511
+  mysql:
+    container_name: mysql
+    command:
+      --lower_case_table_names=1
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+    image: mysql:5.6
+    ports:
+      - 3307:3306
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./docker/data:/var/lib/mysql:rw
+      - ./docker/db:/docker-entrypoint-initdb.d:ro
+  redis:
+    image: redis:5.0.0
+    container_name: redis
+    command: redis-server
+  nginx:
+    image: nginx:1.19-alpine
+    container_name: nginx
+    ports:
+      - 8081:80
+    links:
+      - app
+    volumes:
+      - ./docker/conf.d:/etc/nginx/conf.d
+      - ./docker/log:/var/log/nginx
+      - ./frontend:/var/www/frontend
+networks:
+  default:
+    external:
+      name: default_php_net
