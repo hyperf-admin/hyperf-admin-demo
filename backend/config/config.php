@@ -22,4 +22,7 @@ return [
             LogLevel::WARNING,
         ],
     ],
+    'config_center' => [
+        'enable' => true
+    ]
 ];

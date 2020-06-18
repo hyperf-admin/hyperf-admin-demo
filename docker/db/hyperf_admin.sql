@@ -544,4 +544,27 @@ BEGIN;
 INSERT INTO `user_role` VALUES (1, 1, 1, '2020-06-16 03:20:34', '2020-06-16 03:20:34');
 COMMIT;
 
+-- ----------------------------
+-- Table structure for config_center
+-- ----------------------------
+DROP TABLE IF EXISTS `config_center`;
+CREATE TABLE `config_center` (
+    `id` int(12) unsigned NOT NULL AUTO_INCREMENT,
+    `path` varchar(255) NOT NULL DEFAULT '' COMMENT '存储位置',
+    `value` text COMMENT '节点值',
+    `create_uid` int(12) NOT NULL COMMENT '创建者id',
+    `is_locked` tinyint(4) unsigned NOT NULL DEFAULT '0' COMMENT '是否被锁定',
+    `owner_uids` varchar(255) NOT NULL COMMENT '所有者',
+    `create_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `update_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of config_center
+-- ----------------------------
+BEGIN;
+INSERT INTO `config_center` VALUES (1, 'test.test', '{\"key\":\"val1111\"}', 1, 0, '1', '2020-06-18 09:17:54', '2020-06-18 10:44:44');
+COMMIT;
+
 SET FOREIGN_KEY_CHECKS = 1;
