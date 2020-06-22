@@ -1,5 +1,5 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
 namespace App\Controller;
 
 use App\Model\Test\StudentScore;
@@ -13,11 +13,14 @@ class StudentScoreController extends AdminAbstractController
     {
         return [
             'filter' => [
-                'grade', 'class', 'subject', 'name%',
+                'grade',
+                'class',
+                'subject',
+                'name%',
                 'score|分数' => [
                     'type' => 'input-range',
-                    'select_type' => 'between'
-                ]
+                    'select_type' => 'between',
+                ],
             ],
             'form' => [
                 'id|#' => '',
@@ -26,27 +29,27 @@ class StudentScoreController extends AdminAbstractController
                     'options' => [
                         1 => '一年级',
                         2 => '二年级',
-                    ]
+                    ],
                 ],
                 'class|班级' => [
                     'type' => 'select',
                     'options' => [
                         1 => '一班',
                         2 => '二班',
-                    ]
+                    ],
                 ],
                 'subject|学科' => [
                     'type' => 'select',
                     'options' => [
                         1 => '语文',
                         2 => '数学',
-                    ]
+                    ],
                 ],
                 'score|分数' => [
-                    'type' => 'number'
+                    'type' => 'number',
                 ],
                 'name|学生名称' => [
-                    'rule' => 'required|max:10'
+                    'rule' => 'required|max:10',
                 ],
                 'sex|性别' => [
                     'type' => 'select',
@@ -54,7 +57,7 @@ class StudentScoreController extends AdminAbstractController
                         0 => '女',
                         1 => '男',
                     ],
-                    'default' => 0
+                    'default' => 0,
                 ],
             ],
             'table' => [

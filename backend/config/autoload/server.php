@@ -12,7 +12,7 @@ return [
             'name' => 'http',
             'type' => Server::SERVER_HTTP,
             'host' => '0.0.0.0',
-            'port' => 9511,
+            'port' => 9501,
             'sock_type' => SWOOLE_SOCK_TCP,
             'callbacks' => [
                 SwooleEvent::ON_REQUEST => [Hyperf\HttpServer\Server::class, 'onRequest'],
@@ -31,8 +31,8 @@ return [
         'buffer_output_size' => 2 * 1024 * 1024,
     ],
     'callbacks' => [
-        SwooleEvent::ON_BEFORE_START => [Hyperf\Framework\Bootstrap\ServerStartCallback::class, 'beforeStart'],
         SwooleEvent::ON_WORKER_START => [Hyperf\Framework\Bootstrap\WorkerStartCallback::class, 'onWorkerStart'],
         SwooleEvent::ON_PIPE_MESSAGE => [Hyperf\Framework\Bootstrap\PipeMessageCallback::class, 'onPipeMessage'],
+        SwooleEvent::ON_WORKER_EXIT => [Hyperf\Framework\Bootstrap\WorkerExitCallback::class, 'onWorkerExit'],
     ],
 ];
