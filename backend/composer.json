@@ -76,10 +76,5 @@
       "./vendor/daodao97/hyperf-watch/bin/watch /opt/www/hyperf-admin/hyperf-admin"
     ]
   },
-  "repositories": [
-    {
-      "type": "path",
-      "url": "/opt/www/hyperf-admin/hyperf-admin"
-    }
-  ]
+  "repositories": []
 }
