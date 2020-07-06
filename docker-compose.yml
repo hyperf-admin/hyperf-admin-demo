@@ -52,7 +52,3 @@ services:
       - ./docker/conf.d:/etc/nginx/conf.d
       - ./docker/log:/var/log/nginx
       - ./frontend:/var/www/frontend
-networks:
-  default:
-    external:
-      name: default_php_net
