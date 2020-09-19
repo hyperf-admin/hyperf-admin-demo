@@ -24,4 +24,7 @@ return [
             LogLevel::WARNING,
         ],
     ],
+    'cron_center' => [
+        'enable' => false
+    ]
 ];
