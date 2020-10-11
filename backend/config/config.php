@@ -27,5 +27,4 @@ return [
     'cron_center' => [
         'enable' => false
     ],
-    'export_storager' => env('EXPORT_STORAGER')
 ];

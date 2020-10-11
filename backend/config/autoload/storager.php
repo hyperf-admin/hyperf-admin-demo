@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 return [
     'default' => 'aliyuncs',
+    'export_service' => 'aliyuncs',
 
     /*
     |--------------------------------------------------------------------------
