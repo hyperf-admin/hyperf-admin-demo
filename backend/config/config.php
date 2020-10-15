@@ -24,6 +24,7 @@ return [
             LogLevel::WARNING,
         ],
     ],
+    // 计划任务
     'cron_center' => [
         'enable' => false
     ],

@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 return [
     'default' => 'aliyuncs',
-    'export_service' => 'aliyuncs',
-
     /*
     |--------------------------------------------------------------------------
     | 阿里云oss存储配置
