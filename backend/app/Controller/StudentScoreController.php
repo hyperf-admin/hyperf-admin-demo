@@ -84,12 +84,12 @@ class StudentScoreController extends AdminAbstractController
                 'rowActions' => [
                     [
                         'type' => 'jump',
-                        'target' => '/studentscore/{id}',
+                        'target' => '/student_score/{id}',
                         'text' => '编辑',
                     ],
                     [
                         'type' => 'api',
-                        'target' => '/studentscore/delete',
+                        'target' => '/student_score/delete',
                         'text' => '删除',
                         'props' => [
                             'type' => 'danger',
