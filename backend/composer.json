@@ -73,7 +73,7 @@
     "init-proxy": "init-proxy.sh",
     "watch": [
       "Composer\\Config::disableProcessTimeout",
-      "./vendor/daodao97/hyperf-watch/bin/watch /opt/www/hyperf-admin/hyperf-admin"
+      "./vendor/daodao97/hyperf-watch/bin/watch"
     ]
   },
   "repositories": []
