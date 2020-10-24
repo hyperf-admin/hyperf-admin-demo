@@ -1,18 +1,6 @@
-/*
- Navicat MySQL Data Transfer
-
- Source Server         : local1
- Source Server Type    : MySQL
- Source Server Version : 50729
- Source Host           : localhost:3306
- Source Schema         : hyperf_admin
-
- Target Server Type    : MySQL
- Target Server Version : 50729
- File Encoding         : 65001
-
- Date: 24/10/2020 16:38:40
-*/
+DROP DATABASE IF EXISTS `hyperf_admin`;
+CREATE DATABASE IF NOT EXISTS `hyperf_admin` CHARACTER SET 'utf8mb4';
+USE `hyperf_admin`;
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
