@@ -17,8 +17,8 @@ CREATE TABLE `student_score` (
   `score` int(12) unsigned NOT NULL DEFAULT '0' COMMENT '分数',
   `name` varchar(10) NOT NULL DEFAULT '' COMMENT '学生名称',
   `sex` tinyint(4) unsigned NOT NULL DEFAULT '0' COMMENT '性别, 0女生, 1难受',
-  `create_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `update_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
