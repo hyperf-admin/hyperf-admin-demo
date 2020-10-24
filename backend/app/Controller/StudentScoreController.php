@@ -74,6 +74,7 @@ class StudentScoreController extends AdminAbstractController
                     ],
                 ],
                 'columns' => [
+                    'id',
                     ['field' => 'grade', 'enum' => ['info', 'primary',]],
                     ['field' => 'class', 'enum' => ['info', 'primary',]],
                     ['field' => 'subject', 'enum' => ['info', 'primary',]],
