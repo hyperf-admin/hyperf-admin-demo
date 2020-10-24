@@ -73,6 +73,14 @@ class StudentScoreController extends AdminAbstractController
                         'icon' => 'el-icon-s-grid',
                     ],
                 ],
+                'columns' => [
+                    ['field' => 'grade', 'enum' => ['info', 'primary',]],
+                    ['field' => 'class', 'enum' => ['info', 'primary',]],
+                    ['field' => 'subject', 'enum' => ['info', 'primary',]],
+                    'number',
+                    'name',
+                    ['field' => 'sex', 'enum' => ['info', 'primary',]],
+                ],
                 'rowActions' => [
                     [
                         'type' => 'jump',
