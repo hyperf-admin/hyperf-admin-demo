@@ -868,12 +868,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf-admin/hyperf-admin.git",
-                "reference": "98e088ecd3bfbcd2c9a6cdc3617d930fd6407fc8"
+                "reference": "b8ccb63511de80edcc8d3dfac6a2480f4a7b8c39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf-admin/hyperf-admin/zipball/98e088ecd3bfbcd2c9a6cdc3617d930fd6407fc8",
-                "reference": "98e088ecd3bfbcd2c9a6cdc3617d930fd6407fc8",
+                "url": "https://api.github.com/repos/hyperf-admin/hyperf-admin/zipball/b8ccb63511de80edcc8d3dfac6a2480f4a7b8c39",
+                "reference": "b8ccb63511de80edcc8d3dfac6a2480f4a7b8c39",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -980,7 +980,7 @@
                 }
             ],
             "description": "hyperf-admin",
-            "time": "2020-10-24T07:52:52+00:00"
+            "time": "2020-10-26T03:38:08+00:00"
         },
         {
             "name": "hyperf/amqp",
