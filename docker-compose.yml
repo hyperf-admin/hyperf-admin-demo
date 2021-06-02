@@ -2,7 +2,7 @@ version: '3.1'
 services:
   app:
     container_name: hyperf-admin
-    image: registry.cn-hangzhou.aliyuncs.com/mengtui/php-base:1.1.1
+    image: hyperf/hyperf:7.3-alpine-v3.11-swoole-v4
     command:
       - /bin/sh
       - -c
